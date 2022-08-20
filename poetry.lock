@@ -1,21 +1,4 @@
 [[package]]
-name = "anyio"
-version = "3.6.1"
-description = "High level compatibility layer for multiple asynchronous event loop implementations"
-category = "main"
-optional = false
-python-versions = ">=3.6.2"
-
-[package.dependencies]
-idna = ">=2.8"
-sniffio = ">=1.1"
-
-[package.extras]
-trio = ["trio (>=0.16)"]
-test = ["uvloop (>=0.15)", "mock (>=4)", "uvloop (<0.15)", "contextlib2", "trustme", "pytest-mock (>=3.6.1)", "pytest (>=7.0)", "hypothesis (>=4.0)", "coverage[toml] (>=4.5)"]
-doc = ["sphinx-autodoc-typehints (>=1.2.0)", "sphinx-rtd-theme", "packaging"]
-
-[[package]]
 name = "asgiref"
 version = "3.5.2"
 description = "ASGI specs, helper code, and adapters"
@@ -105,17 +88,6 @@ python-versions = "*"
 pycparser = "*"
 
 [[package]]
-name = "charset-normalizer"
-version = "2.1.1"
-description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
-category = "main"
-optional = false
-python-versions = ">=3.6.0"
-
-[package.extras]
-unicode_backport = ["unicodedata2"]
-
-[[package]]
 name = "click"
 version = "8.1.3"
 description = "Composable command line interface toolkit"
@@ -200,49 +172,12 @@ optional = false
 python-versions = ">=3.6.1"
 
 [[package]]
-name = "http-message-signatures"
-version = "0.4.3"
-description = "An implementation of the IETF HTTP Message Signatures draft standard"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-cryptography = ">=36.0.2"
-http-sfv = ">=0.9.3"
-
-[package.extras]
-tests = ["requests", "mypy", "wheel", "build", "coverage", "flake8"]
-
-[[package]]
-name = "http-sfv"
-version = "0.9.8"
-description = "Parse and serialise HTTP Structured Field Values"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-typing-extensions = "*"
-
-[package.extras]
-dev = ["black", "mypy"]
-
-[[package]]
 name = "hyperframe"
 version = "6.0.1"
 description = "HTTP/2 framing layer for Python"
 category = "main"
 optional = false
 python-versions = ">=3.6.1"
-
-[[package]]
-name = "idna"
-version = "3.3"
-description = "Internationalized Domain Names in Applications (IDNA)"
-category = "main"
-optional = false
-python-versions = ">=3.5"
 
 [[package]]
 name = "iniconfig"
@@ -528,40 +463,6 @@ tomli = ">=1.0.0"
 testing = ["xmlschema", "requests", "pygments (>=2.7.2)", "nose", "mock", "hypothesis (>=3.56)", "argcomplete"]
 
 [[package]]
-name = "requests"
-version = "2.28.1"
-description = "Python HTTP for Humans."
-category = "main"
-optional = false
-python-versions = ">=3.7, <4"
-
-[package.dependencies]
-certifi = ">=2017.4.17"
-charset-normalizer = ">=2,<3"
-idna = ">=2.5,<4"
-urllib3 = ">=1.21.1,<1.27"
-
-[package.extras]
-use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
-socks = ["PySocks (>=1.5.6,!=1.5.7)"]
-
-[[package]]
-name = "requests-http-signature"
-version = "0.7.1"
-description = "A Requests auth module for HTTP Message Signatures"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-http-message-signatures = ">=0.4.3"
-http-sfv = ">=0.9.3"
-requests = ">=2.25.1"
-
-[package.extras]
-tests = ["mypy", "wheel", "build", "coverage", "flake8"]
-
-[[package]]
 name = "ruamel.yaml"
 version = "0.17.21"
 description = "ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order"
@@ -580,14 +481,6 @@ jinja2 = ["ruamel.yaml.jinja2 (>=0.2)"]
 name = "ruamel.yaml.clib"
 version = "0.2.6"
 description = "C version of reader, parser and emitter for ruamel.yaml derived from libyaml"
-category = "main"
-optional = false
-python-versions = ">=3.5"
-
-[[package]]
-name = "sniffio"
-version = "1.2.0"
-description = "Sniff out which async library your code is running under"
 category = "main"
 optional = false
 python-versions = ">=3.5"
@@ -615,27 +508,6 @@ description = "Tornado is a Python web framework and asynchronous networking lib
 category = "main"
 optional = false
 python-versions = ">= 3.7"
-
-[[package]]
-name = "typing-extensions"
-version = "4.3.0"
-description = "Backported and Experimental Type Hints for Python 3.7+"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
-name = "urllib3"
-version = "1.26.11"
-description = "HTTP library with thread-safe connection pooling, file post, and more."
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, <4"
-
-[package.extras]
-socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
-secure = ["ipaddress", "certifi", "idna (>=2.0.0)", "cryptography (>=1.3.4)", "pyOpenSSL (>=0.14)"]
-brotli = ["brotlipy (>=0.6.0)", "brotli (>=1.0.9)", "brotlicffi (>=0.8.0)"]
 
 [[package]]
 name = "urwid"
@@ -687,13 +559,9 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "649645fe595c4b3725329ea36049359968597f00b41d1fc6d15d81fe550dbb05"
+content-hash = "7893af04ed793807569c12073854240c787963965a3cc8671f097106487352b5"
 
 [metadata.files]
-anyio = [
-    {file = "anyio-3.6.1-py3-none-any.whl", hash = "sha256:cb29b9c70620506a9a8f87a309591713446953302d7d995344d0d7c6c0c9a7be"},
-    {file = "anyio-3.6.1.tar.gz", hash = "sha256:413adf95f93886e442aea925f3ee43baa5a765a64a0f52c6081894f9992fdd0b"},
-]
 asgiref = [
     {file = "asgiref-3.5.2-py3-none-any.whl", hash = "sha256:1d2880b792ae8757289136f1db2b7b99100ce959b2aa57fd69dab783d05afac4"},
     {file = "asgiref-3.5.2.tar.gz", hash = "sha256:4a29362a6acebe09bf1d6640db38c1dc3d9217c68e6f9f6204d72667fc19a424"},
@@ -867,10 +735,6 @@ cffi = [
     {file = "cffi-1.15.1-cp39-cp39-win_amd64.whl", hash = "sha256:70df4e3b545a17496c9b3f41f5115e69a4f2e77e94e1d2a8e1070bc0c38c8a3c"},
     {file = "cffi-1.15.1.tar.gz", hash = "sha256:d400bfb9a37b1351253cb402671cea7e89bdecc294e8016a707f6d1d8ac934f9"},
 ]
-charset-normalizer = [
-    {file = "charset-normalizer-2.1.1.tar.gz", hash = "sha256:5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"},
-    {file = "charset_normalizer-2.1.1-py3-none-any.whl", hash = "sha256:83e9a75d1911279afd89352c68b45348559d1fc0506b054b346651b5e7fee29f"},
-]
 click = [
     {file = "click-8.1.3-py3-none-any.whl", hash = "sha256:bb4d8133cb15a609f44e8213d9b391b0809795062913b383c62be0ee95b1db48"},
     {file = "click-8.1.3.tar.gz", hash = "sha256:7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"},
@@ -919,21 +783,9 @@ hpack = [
     {file = "hpack-4.0.0-py3-none-any.whl", hash = "sha256:84a076fad3dc9a9f8063ccb8041ef100867b1878b25ef0ee63847a5d53818a6c"},
     {file = "hpack-4.0.0.tar.gz", hash = "sha256:fc41de0c63e687ebffde81187a948221294896f6bdc0ae2312708df339430095"},
 ]
-http-message-signatures = [
-    {file = "http-message-signatures-0.4.3.tar.gz", hash = "sha256:2db271cd26e1465e2a32c575102974954c2ca46d2ef52ab6af3bbc28c9a6a06e"},
-    {file = "http_message_signatures-0.4.3-py3-none-any.whl", hash = "sha256:ace294e7c7c6a805c3d1a824987e38d6961ec44318407e317cb57c70e66ece83"},
-]
-http-sfv = [
-    {file = "http_sfv-0.9.8-py3-none-any.whl", hash = "sha256:654eae7cd6cf27b907da50fd8554e4b64d390782c50ade9e2ce02c139ef90116"},
-    {file = "http_sfv-0.9.8.tar.gz", hash = "sha256:711507bc2aeab0b00890eeff5274f5702c915dab808d4041576beed166ba1d71"},
-]
 hyperframe = [
     {file = "hyperframe-6.0.1-py3-none-any.whl", hash = "sha256:0ec6bafd80d8ad2195c4f03aacba3a8265e57bc4cff261e802bf39970ed02a15"},
     {file = "hyperframe-6.0.1.tar.gz", hash = "sha256:ae510046231dc8e9ecb1a6586f63d2347bf4c8905914aa84ba585ae85f28a914"},
-]
-idna = [
-    {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
-    {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
 ]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
@@ -1174,14 +1026,6 @@ pytest = [
     {file = "pytest-7.1.2-py3-none-any.whl", hash = "sha256:13d0e3ccfc2b6e26be000cb6568c832ba67ba32e719443bfe725814d3c42433c"},
     {file = "pytest-7.1.2.tar.gz", hash = "sha256:a06a0425453864a270bc45e71f783330a7428defb4230fb5e6a731fde06ecd45"},
 ]
-requests = [
-    {file = "requests-2.28.1-py3-none-any.whl", hash = "sha256:8fefa2a1a1365bf5520aac41836fbee479da67864514bdb821f31ce07ce65349"},
-    {file = "requests-2.28.1.tar.gz", hash = "sha256:7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"},
-]
-requests-http-signature = [
-    {file = "requests-http-signature-0.7.1.tar.gz", hash = "sha256:ebc5b2fbb95d4519385afd385b31a34e9bdff20fd0b3f36e8ce42945b8340997"},
-    {file = "requests_http_signature-0.7.1-py3-none-any.whl", hash = "sha256:5770fa5c6cd9dd700bc2aa92d3d1dd8e26b9a7c083585d2db0c8bf9ec482c906"},
-]
 "ruamel.yaml" = [
     {file = "ruamel.yaml-0.17.21-py3-none-any.whl", hash = "sha256:742b35d3d665023981bd6d16b3d24248ce5df75fdb4e2924e93a05c1f8b61ca7"},
     {file = "ruamel.yaml-0.17.21.tar.gz", hash = "sha256:8b7ce697a2f212752a35c1ac414471dc16c424c9573be4926b56ff3f5d23b7af"},
@@ -1218,10 +1062,6 @@ requests-http-signature = [
     {file = "ruamel.yaml.clib-0.2.6-cp39-cp39-win_amd64.whl", hash = "sha256:825d5fccef6da42f3c8eccd4281af399f21c02b32d98e113dbc631ea6a6ecbc7"},
     {file = "ruamel.yaml.clib-0.2.6.tar.gz", hash = "sha256:4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd"},
 ]
-sniffio = [
-    {file = "sniffio-1.2.0-py3-none-any.whl", hash = "sha256:471b71698eac1c2112a40ce2752bb2f4a4814c22a54a3eed3676bc0f5ca9f663"},
-    {file = "sniffio-1.2.0.tar.gz", hash = "sha256:c4666eecec1d3f50960c6bdf61ab7bc350648da6c126e3cf6898d8cd4ddcd3de"},
-]
 sortedcontainers = [
     {file = "sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0"},
     {file = "sortedcontainers-2.4.0.tar.gz", hash = "sha256:25caa5a06cc30b6b83d11423433f65d1f9d76c4c6a0c90e3379eaa43b9bfdb88"},
@@ -1242,14 +1082,6 @@ tornado = [
     {file = "tornado-6.2-cp37-abi3-win32.whl", hash = "sha256:5c87076709343557ef8032934ce5f637dbb552efa7b21d08e89ae7619ed0eb23"},
     {file = "tornado-6.2-cp37-abi3-win_amd64.whl", hash = "sha256:e5f923aa6a47e133d1cf87d60700889d7eae68988704e20c75fb2d65677a8e4b"},
     {file = "tornado-6.2.tar.gz", hash = "sha256:9b630419bde84ec666bfd7ea0a4cb2a8a651c2d5cccdbdd1972a0c859dfc3c13"},
-]
-typing-extensions = [
-    {file = "typing_extensions-4.3.0-py3-none-any.whl", hash = "sha256:25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02"},
-    {file = "typing_extensions-4.3.0.tar.gz", hash = "sha256:e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"},
-]
-urllib3 = [
-    {file = "urllib3-1.26.11-py2.py3-none-any.whl", hash = "sha256:c33ccba33c819596124764c23a97d25f32b28433ba0dedeb77d873a38722c9bc"},
-    {file = "urllib3-1.26.11.tar.gz", hash = "sha256:ea6e8fb210b19d950fab93b60c9009226c63a28808bc8386e05301e25883ac0a"},
 ]
 urwid = [
     {file = "urwid-2.1.2.tar.gz", hash = "sha256:588bee9c1cb208d0906a9f73c613d2bd32c3ed3702012f51efe318a3f2127eae"},

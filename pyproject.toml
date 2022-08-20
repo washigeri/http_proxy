@@ -6,9 +6,7 @@ authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-anyio = "^3.6.1"
 mitmproxy = "^8.1.1"
-requests-http-signature = "^0.7.1"
 pycryptodome = "^3.15.0"
 
 [tool.poetry.dev-dependencies]
