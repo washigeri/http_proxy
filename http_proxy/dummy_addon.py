@@ -8,6 +8,9 @@ from pprint import pprint
 from typing import Optional
 from Crypto.PublicKey import RSA
 
+from cryptography.hazmat.primitives import serialization, hashes
+from cryptography.hazmat.primitives.asymmetric import padding
+
 from mitmproxy import ctx
 from mitmproxy.http import HTTPFlow
 
@@ -35,6 +38,21 @@ def compute_signature_hash(sign_string: bytes) -> bytes:
     return b64encode(hex(signature).encode())
 
 
+def compute_signature_hash_v2(sign_string: bytes) -> bytes:
+    with SBX_QSEALC_KEY.open("rb") as private_key_file:
+        private_key = serialization.load_pem_private_key(
+            private_key_file.read(),
+            password=None
+        )
+    signature_value = private_key.sign(
+        sign_string,
+        padding.PKCS1v15(
+        ),
+        hashes.SHA256()
+    )
+    return b64encode(signature_value)
+
+
 def compute_date_header() -> str:
     #  Tue, 12 Mar 2019 08:49:49 GMT
     return email.utils.formatdate(int(datetime.datetime.now().timestamp()), usegmt=True)
@@ -53,10 +71,10 @@ def compute_digest(body: Optional[bytes]) -> Optional[bytes]:
 
 
 def compute_signature_header(key_id: str, signing_string: bytes, digest: Optional[bytes] = None) -> bytes:
-    signature = compute_signature_hash(signing_string)
+    signature = compute_signature_hash_v2(signing_string)
     return f'keyId="{key_id}",algorithm="rsa-sha256",headers="(request-target) ' \
-           f'{"digest" if digest is not None else ""}' \
-           f' tpp-request-id date",signature="{signature.decode()}"'.encode()
+           f'{" digest" if digest is not None else ""}' \
+           f'tpp-request-id date",signature="{signature.decode()}"'.encode()
 
 
 class Dummy:

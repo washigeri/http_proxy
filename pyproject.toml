@@ -8,6 +8,7 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.10"
 mitmproxy = "^8.1.1"
 pycryptodome = "^3.15.0"
+cryptography = "^37.0.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"

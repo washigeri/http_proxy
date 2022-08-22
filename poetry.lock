@@ -559,7 +559,7 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "7893af04ed793807569c12073854240c787963965a3cc8671f097106487352b5"
+content-hash = "24808bbbf1bb99b61de252ec3f9f8a2ea2215d5136147ac699ee49f2a3c1101c"
 
 [metadata.files]
 asgiref = [
